@@ -17,7 +17,7 @@ pipeline{
                 setlocal enabledelayedexpansion
 
                 REM Set JUNIT_PATH
-                set "JUNIT_PATH=%HOMEDRIVE%%HOMEPATH%\.m2\repository\org\junit\platform\junit-platform-console-standalone\1.10.2\junit-platform-console-standalone-1.10.2.jar"
+                set "JUNIT_PATH=%HOMEDRIVE%%HOMEPATH%\\.m2\\repository\\org\\junit\\platform\\junit-platform-console-standalone\\1.10.2\\junit-platform-console-standalone-1.10.2.jar"
 
                 '''
             }
