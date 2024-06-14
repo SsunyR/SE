@@ -1,25 +1,15 @@
 pipeline{
     agent any
 
+    environment{
+        JUNIT_PATH = "${env.HOMEDRIVE}${env.HOMEPATH}\\.m2\\repository\\org\\junit\\platform\\junit-platform-console-standalone\\1.10.2\\junit-platform-console-standalone-1.10.2.jar"
+    }
+
     stages{
 
         stage('Checkout'){
             steps {
                 checkout scm
-            }
-        }
-
-        stage('Set JUNIT_PATH'){
-            steps{
-                bat '''
-
-                @echo off
-                setlocal enabledelayedexpansion
-
-                REM Set JUNIT_PATH
-                set "JUNIT_PATH=%HOMEDRIVE%%HOMEPATH%\\.m2\\repository\\org\\junit\\platform\\junit-platform-console-standalone\\1.10.2\\junit-platform-console-standalone-1.10.2.jar"
-
-                '''
             }
         }
 
