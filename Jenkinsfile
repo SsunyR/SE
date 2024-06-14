@@ -2,9 +2,7 @@ pipeline{
     agent any
 
     environment{
-        HOMEDRIVE = "${env.HOMEDRIVE}"
-        HOMEPATH = "${env.HOMEPATH}"
-        JUNIT_PATH = "${HOMEDRIVE}${HOMEPATH}\\.m2\\repository\\org\\junit\\platform\\junit-platform-console-standalone\\1.10.2\\junit-platform-console-standalone-1.10.2.jar"
+        JUNIT_PATH = "lib\\junit\\platform\\junit-platform-console-standalone\\1.10.2\\junit-platform-console-standalone-1.10.2.jar"
     }
 
     stages{
@@ -12,14 +10,6 @@ pipeline{
         stage('Checkout'){
             steps {
                 checkout scm
-            }
-        }
-
-        stage('Print User Info') {
-            steps {
-                echo "Running as user: ${env.USERNAME}"
-                echo "Home drive: ${env.HOMEDRIVE}"
-                echo "Home path: ${env.HOMEPATH}"
             }
         }
 
