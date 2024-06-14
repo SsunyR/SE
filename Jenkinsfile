@@ -29,10 +29,10 @@ pipeline{
                 bat '''
 
                 REM Compile the classes
-                javac -encoding UTF-8 -d classes "src\main\java\org\example\*.java"
+                javac -encoding UTF-8 -d classes "src\\main\\java\\org\\example\\*.java"
 
                 REM Compile the test classes
-                javac -encoding UTF-8 -d classes -cp "%JUNIT_PATH%;classes;" "src\test\java\org\example\*.java"
+                javac -encoding UTF-8 -d classes -cp "%JUNIT_PATH%;classes;" "src\\test\\java\org\\example\\*.java"
 
                 '''
 
