@@ -4,7 +4,7 @@ pipeline{
     environment{
         HOMEDRIVE = "${env.HOMEDRIVE}"
         HOMEPATH = "${env.HOMEPATH}"
-        JUNIT_PATH = "C:\\Users\\user\\.m2\\repository\\org\\junit\\platform\\junit-platform-console-standalone\\1.10.2\\junit-platform-console-standalone-1.10.2.jar"
+        JUNIT_PATH = "${HOMEDRIVE}${HOMEPATH}\\.m2\\repository\\org\\junit\\platform\\junit-platform-console-standalone\\1.10.2\\junit-platform-console-standalone-1.10.2.jar"
     }
 
     stages{
